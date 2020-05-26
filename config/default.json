@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://contactBook:contactBook@contactbook-ohw2x.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://contactBook:contactBook@contactbook-ohw2x.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
 }
