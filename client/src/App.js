@@ -6,6 +6,7 @@ import About from "./components/pages/About";
 import ContactState from "./context/contact/ContactState"
 import AuthState from "./context/auth/AuthState";
 import Register from "./components/auth/Register"
+import Login from "./components/auth/Login"
 import './App.css';
 import authContext from './context/auth/authContext';
 
@@ -22,6 +23,7 @@ const App = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/Register" component={Register} />
+                <Route exact path="/Login" component={Login} />
               </Switch>
             </div>
           </Fragment>
