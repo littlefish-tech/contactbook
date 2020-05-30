@@ -25,7 +25,7 @@ const Contacts = () => {
                         <ContactItem contact={contact} />
                     </CSSTransition>
                 )) :
-                    contacts.map(contact => (<ContactItem key={contact._id} contact={contact} />))}
+                    contacts.map(contact => (<ContactItem key={contact._id} timeout={500} contact={contact} />))}
             </TransitionGroup>) : <Spinner />}
 
         </Fragment>
