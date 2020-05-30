@@ -24,14 +24,18 @@ router.get("/", auth, async (req, res) => {
 //@access private
 
 router.post("/", [auth, [
-    check("name", "name is required").not().isEmpty(),
-    check("email", "Please enter a valid email address").isEmail()
+    check("name", "name is required").not().isEmpty()
 ]], async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() })
     }
-    const { name, email, phone, type } = req.body;
+    const {
+        name,
+        email,
+        phone,
+        type
+    } = req.body;
     try {
         const newContact = new Contact({
             name,
